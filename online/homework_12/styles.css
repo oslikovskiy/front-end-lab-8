@@ -1,0 +1,32 @@
+body{
+    background-color: #1C1C1E;
+    color: #A19E89;
+    box-sizing: border-box;
+}
+.block{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    width: 16%;
+}
+.tankType{
+    width: 100%;
+}
+.countryType{
+    height: 12px;
+    width: 16px;
+    margin-left: 20px;
+}
+.tankLevel{
+    margin-left: 10px;
+    font-size: 16px;
+}
+.tankModel{
+    display: inline;
+    margin-left: 4px;
+    font-size: 18px;text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

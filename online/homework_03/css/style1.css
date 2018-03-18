@@ -1,0 +1,146 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background-color: #DCBB9A;
+  color: #000000; }
+  body #content {
+    width: 70%;
+    height: 100%;
+    margin: 10px auto;
+    background-color: #fff; }
+    body #content h1 {
+      padding: 20px;
+      text-align: center;
+      text-transform: none;
+      font-size: 25px;
+      font-weight: bold;
+      color: #893C00; }
+    body #content p {
+      margin: 0 10px;
+      padding: 10px; }
+      body #content p .img-left {
+        float: left;
+        padding: 2px;
+        border: 2px solid #893C00;
+        margin: 0 15px 10px 0;
+        width: 46%; }
+    body #content h2 {
+      margin: 0 10px;
+      padding: 10px 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #893C00; }
+    body #content .brief {
+      margin: 20px;
+      padding: 20px;
+      float: left;
+      width: 380px;
+      background-color: #FADCBA;
+      color: #000000;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      font-size: 15px; }
+    body #content .img-right {
+      float: right;
+      padding: 2px;
+      border: 2px solid #893C00;
+      margin: 0 15px 0 15px; }
+    body #content a {
+      margin: 0 20px;
+      color: #3D70A1; }
+    body #content .img-left {
+      float: left;
+      padding: 2px;
+      border: 2px solid #893C00;
+      margin: 0 15px; }
+    body #content table {
+      margin: 10px; }
+      body #content table caption {
+        color: #000000; }
+      body #content table th {
+        background-color: #E0E0E0; }
+      body #content table td {
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #E0E0E0; }
+      body #content table a {
+        color: #3D70A1; }
+      body #content table caption {
+        text-align: right; }
+      body #content table tr th {
+        padding: 10px;
+        background-color: #E0E0E0;
+        text-align: left; }
+      body #content table tr td {
+        margin-left: 20px;
+        padding: 10px;
+        background-color: #FFFFFF; }
+    body #content div {
+      color: #757575; }
+      body #content div .myForm {
+        margin: 20px 10px; }
+      body #content div .userName {
+        padding: 10px 0;
+        display: inline-block; }
+        body #content div .userName input {
+          width: 420px; }
+      body #content div .email {
+        padding: 10px 0;
+        display: block; }
+        body #content div .email input {
+          width: 850px; }
+      body #content div .rate {
+        padding: 10px 0;
+        display: block; }
+        body #content div .rate input {
+          width: 850px; }
+    body #content .btn {
+      margin: 20px 0;
+      width: 230px;
+      padding: 10px 30px;
+      background-color: #fff;
+      color: #3D70A1;
+      font-size: 20px;
+      border: 1px solid #3D70A1; }
+
+/*# sourceMappingURL=style1.css.map */
