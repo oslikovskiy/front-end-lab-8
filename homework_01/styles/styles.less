@@ -1,0 +1,90 @@
+@import 'variables';
+
+.color-white {
+    color: lighten(@grey, 100%);
+}
+
+.navigation {
+    padding: 0 16px;
+}
+
+#navbarNav {
+    line-height: 40px;
+    .nav-item {
+        a:hover {
+            color: lighten(@grey, 100%);
+            background-color: @blue;
+        }
+    }
+}
+
+.hr-nav {
+    margin: 0;
+    background-color: lighten(@grey, 50%);
+}
+
+hr {
+    margin-top: 10px;
+    background-color: @blue;
+}
+
+h1,
+h3 {
+    margin-top: 20px;
+    color: @blue;
+}
+
+.content {
+    line-height: 1.1em;
+}
+
+img {
+    width: 100%;
+}
+
+
+.block-set {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 30px;
+    p {
+        .color-white;
+        margin: auto 0;
+        padding: 10px 0;
+    }
+}
+
+.red {
+    .block-set;
+    border: 1px solid @red;
+    background-color: @red;
+}
+
+.blue {
+    .block-set;
+    border: 1px solid @blue;
+    background-color: @blue;
+}
+
+.orange {
+    .block-set;
+    border: 1px solid @orange;
+    background-color: @orange;
+}
+
+.green {
+    .block-set;
+    border: 1px solid @green;
+    background-color: @green;
+}
+
+
+.footer {
+    .color-white;
+    height: 40px;
+    background-color: @grey;
+    p {
+        margin: 0;
+        padding: 8px 0 0 10px;
+    }
+}
