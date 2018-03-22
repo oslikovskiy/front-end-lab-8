@@ -15,7 +15,6 @@ var includes = function (arr, value) {
 			isIncludes = true;
 		}
 	}
-
 	return includes;
 };
 
@@ -97,17 +96,10 @@ var faktor = function (n) {
 	}
 };
 
-
 function bind(fn, context) {
 	bindArr = [].slice.call(arguments, 2);
-
 	return function () {
 		var fnArgs = [].slice.call(arguments);
 		return fn.apply(con);
 	}
 }
-
-
-
-
-
