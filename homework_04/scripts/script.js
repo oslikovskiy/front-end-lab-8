@@ -117,3 +117,29 @@ Monster.prototype.fury = function () {
 		return;
 	}
 }
+
+var hunter = new Champion({
+	name: ‘Rexxar’,
+	attack: 10,
+	hitpoints: 60
+});
+
+var beast = new Monster({
+	name: ‘King Krush’,
+	attack: 8,
+	hitpoints: 80
+});
+
+//hunter.fight(beast);
+//beast.getHitpoints();
+//beast.enrage();
+//hunter.fight(beast);
+//beast.getHitpoints();
+//beast.fight(hunter);
+//hunter.getHitpoints();
+//hunter.fight(beast);
+//beast.isAlive();
+//hunter.getAttack();
+//hunter.getHitpoints();
+//hunter.heal();
+//hunter.getHitpoints();
