@@ -1,11 +1,11 @@
 function assign() {
 	var obj = arguments[0];
-	
+
 	for (var i = 1; i < arguments.length; i++) {
 		var data = arguments[i];
-		
+
 		for (var key in data) {
-			obj[key] = data[key];
+			obj[value] = data[value];
 		}
 	}
 	return obj;
@@ -60,13 +60,13 @@ Data.prototype.fight = function () {
 	} else if (item.isAlive()) {
 		item.setHitpoints(item.getHitpoints() - this.getAttack())
 	} else {
-		console.log('You are dead... Fuck... ha-ha-ha');
+		console.log('You are dead...');
 		return;
 	}
 }
 
 Data.prototype.isAlive = function (item) {
-	if(this.getHitpoints() > 0){
+	if (this.getHitpoints() > 0) {
 		return true;
 	} else {
 		return false;
@@ -83,22 +83,37 @@ function Champion(name, attack, hitpoints) {
 	this.attack = attack;
 	this.hitpoints = hitpoints;
 	this.block = false;
-	this.heal = function () {
+}
 
+Champion.prototype.heal = function () {
+	if (this.getTotalHitpoints() > (this.getHitpoints() + 5)) {
+		this.setHitpoints((this.getHitpoints() + 5));
 	}
-	this.defence = function () {
+}
 
-	}
+Champion.prototype.defence = function () {
+	this.block = true;
+	this.setTotalHitpoints((this.getTotalHitpoints() + 1));
 }
 
 function Monster(name, attack, hitpoints) {
 	this.name = name;
 	this.attack = attack;
 	this.hitpoints = hitpoints;
-	this.enrage = function () {
+	this.rage = 0;
+}
 
-	}
-	this.fury = function () {
+Monster.prototype.enrage = function () {
+	this.rage = 2;
+}
 
+Monster.prototype.fury = function () {
+	if ((this.getHitpoints() > 5) && (this.getTotalHitpoints() > 5)) {
+		this.setHitpoints((this.getHitpoints() - 5));
+		this.setTotalHitpoints((this.getTotalHitpoints() - 5));
+		this.setAttack((this.getAttack() + 2));
+	} else {
+		console.log("You have not enough  hitpoints to continue.");
+		return;
 	}
 }
