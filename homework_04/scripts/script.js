@@ -5,7 +5,7 @@ function assign() {
 		var data = arguments[i];
 		
 		for (var key in data) {
-			obj[value] = data[value];
+			obj[key] = data[key];
 		}
 	}
 	return obj;
