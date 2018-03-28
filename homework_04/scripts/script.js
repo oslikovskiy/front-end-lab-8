@@ -119,13 +119,13 @@ Monster.prototype.fury = function () {
 }
 
 var hunter = new Champion({
-	name: ‘Rexxar’,
+	name: 'Rexxar',
 	attack: 10,
 	hitpoints: 60
 });
 
 var beast = new Monster({
-	name: ‘King Krush’,
+	name: 'King Krush',
 	attack: 8,
 	hitpoints: 80
 });
