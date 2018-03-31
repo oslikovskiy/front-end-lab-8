@@ -1,12 +1,14 @@
-function assign() {
+function assign () {
 	var obj = arguments[0];
-
-	for (var i = 1; i < arguments.length; i++) {
-		var data = arguments[i];
-
-		for (var key in data) {
-			obj[value] = data[value];
-		}
+	
+	for(var i = 1; i < arguments.length; i++){
+		var nextSource = arguments[i];
+      		
+		if (nextSource != null) { 
+	        	for (var nextKey in nextSource) {
+	            	obj[nextKey] = nextSource[nextKey];
+	        	}
+      		}
 	}
 	return obj;
 }
@@ -22,9 +24,13 @@ var options = {
 
 var configs = assign({}, defaults, options);
 
+
+
+
 function Data(name, attack, hitpoints) {
 	this.name = name;
 	this.attack = attack;
+	this.hitpoints = hitpoints;
 	this.currentHitpoints = hitpoints;
 	this.totalHitpoints = hitpoints;
 }
@@ -73,15 +79,7 @@ Data.prototype.isAlive = function (item) {
 	}
 }
 
-var unit = new Data();
-
-Champion.prototype = unit;
-Monster.prototype = unit;
-
 function Champion(name, attack, hitpoints) {
-	this.name = name;
-	this.attack = attack;
-	this.hitpoints = hitpoints;
 	this.block = false;
 }
 
@@ -97,9 +95,6 @@ Champion.prototype.defence = function () {
 }
 
 function Monster(name, attack, hitpoints) {
-	this.name = name;
-	this.attack = attack;
-	this.hitpoints = hitpoints;
 	this.rage = 0;
 }
 
