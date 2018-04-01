@@ -1,4 +1,4 @@
-function* upper(items) {
+function *upper(items) {
     for (var i = 0; i < items.length; i++) {
         try {
             yield items[i].toUpperCase();
