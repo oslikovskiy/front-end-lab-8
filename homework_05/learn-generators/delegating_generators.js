@@ -1,7 +1,7 @@
-function* flat(arr) {
+function *flat(arr) {
     if (Array.isArray(arr)) {
         for (var i = 0; i < arr.length; i++) {
-            yield* flat(arr[i])
+            yield *flat(arr[i])
         }
         yield arr;
     }
