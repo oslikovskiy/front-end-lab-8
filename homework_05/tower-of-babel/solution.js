@@ -13,7 +13,7 @@ console.log(a);
 console.log(b);
 
 try {
-    c = 100;
+    c = 1000;
 } catch (e) {
     console.log(e);
 }

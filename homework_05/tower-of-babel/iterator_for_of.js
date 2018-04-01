@@ -1,14 +1,38 @@
 const max = process.argv[2];
-    let FizzBuzz = {
-      [Symbol.iterator]() {
-        // here belongs the FizzBuzz logic
-        // Hint：
-        // When it's finished you have to return an object
-        // with the property `done: true` but before you
-        // have to set `done: false`
-      }
-    }
 
-    for (var n of FizzBuzz) {
-      console.log(n);
+let FizzBuzz = {
+    [Symbol.iterator]() {
+        let value = 1;
+
+        return {
+            next() {
+                let el = value;
+
+                if (value > max) {
+                    return {
+                        done: true
+                    };
+                }
+                if (el % 15 === 0) {
+                    el = "FizBuzz";
+                } else if (el % 3 === 0) {
+                    el = "Fizz";
+                } else if (el % 5 === 0) {
+                    el = "Buzz";
+                }
+
+                value++;
+
+                return {
+                    done: false,
+                    value: el
+                };
+            }
+        }
     }
+}
+
+
+for (var x of FizzBuzz) {
+    console.log(x);
+}

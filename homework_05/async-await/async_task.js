@@ -5,19 +5,25 @@ const waitFewSec = (msec, triggerFail) => {
                 reject(false);
                 return;
             }
-
             resolve(true);
         }, msec);
     });
 };
+
 const asyncFn = async () => {
     const result = await waitFewSec(1000);
     return result;
 };
 
-/* Your code here */
+async function doAsyncMagic() {
+    let newArr = []
 
+    for (let i = 0; i < 4; i++) {
+        newArr.push(await asyncFn())
+    }
 
+    console.log(newArr);
+}
 
 doAsyncMagic();
 
@@ -27,8 +33,14 @@ async function* rangeGen() {
     }
 }
 
-/* Your code here */
+async function iterateRange() {
+    let result = 0;
 
+    for await (let value of rangeGen()) {
+        result = result + value;
+    }
 
+    return result;
+}
 
 iterateRange();
