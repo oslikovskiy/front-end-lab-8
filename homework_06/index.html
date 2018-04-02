@@ -2,15 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>homework_06</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>homework_06</title>
 </head>
 
 <body>
-    <script src="task1.js"></script>
-    <script src="task2.js"></script>
+  <form id="ipForm">
+    <div class="form-group">
+      <label class="sr-only" for="ip">enter ip address</label>
+      <input type="text" class="form-control" id="ip" placeholder="Please enter ip address">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Track ip</button>
+  </form>
+
+  <div class="ip-response"></div>
+  <div class="response-validate"></div>
+  
+  <script src="js/task1.js"></script>
+  <script src="js/task2.js"></script>
 </body>
 
 </html>
