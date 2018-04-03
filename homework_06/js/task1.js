@@ -9,6 +9,7 @@ var http = {
           resolve(this.responseText);
         } else {
           var error = new Error(this.statusText);
+
           error.code = this.status;
           reject(error);
         }
@@ -29,6 +30,7 @@ var http = {
           resolve(this.responseText);
         } else {
           var error = new Error(this.statusText);
+
           error.code = this.status;
           reject(error);
         }
