@@ -1,1 +1,1 @@
-Front-end-lab-8  offline -->  ?\_(?)_/?  --->  ${ EPAM }
+--->  ${ EPAM_Front-end-lab-8 _offline }
