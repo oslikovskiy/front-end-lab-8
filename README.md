@@ -1,1 +1,1 @@
---->  ${ EPAM_Front-end-lab-8 _offline }
+EPAM Front-end-lab-8
