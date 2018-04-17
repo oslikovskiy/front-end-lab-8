@@ -35,7 +35,6 @@ function AddRequiredValidation(input) {
 function AddMaxLengthValidation(input, max) {
   if (input.value.toString().length > max) {
     input.valid = false;
-
     console.log(`Validation faild, the input value length is more than ${max}`);
   } else if ("valid" in input) {
     if (input.valid) {
@@ -50,7 +49,6 @@ function AddMaxLengthValidation(input, max) {
 function AddNumberValidation(input) {
   if (typeof input.value !== "number") {
     input.valid = false;
-
     console.log("Validation faild, input value is not a number");
   } else if ("valid" in input) {
     if (input.valid) {
