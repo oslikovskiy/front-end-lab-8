@@ -22,7 +22,7 @@ class NumberInput extends Input {
 
 // 1
 function AddRequiredValidation(input) {
-  if (input.value) {
+  if (input.value !== '' && input.value !== undefined) {
     console.log("Your value is valid, all validators passed!");
     input.valid = true;
   } else {
