@@ -1,0 +1,156 @@
+body {
+    padding: 20px;
+    font: normal 14px/1.2 Arial, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.error {
+    color: red;
+}
+
+/**************/
+
+/* Names list */
+
+.names {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 300px;
+    float: left;
+    margin-right: 2px;
+}
+
+.names li {
+    background: #00BCD4;
+    margin: 0 0 1px 0;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+}
+
+/***************/
+
+/* Scores list */
+
+.scores {
+    width: 80px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    margin-right: 30px;
+}
+
+.scores li {
+    margin: 0 0 1px 0;
+    padding: 10px 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    background: #727272;
+    text-align: center;
+}
+
+.scores span {
+    pointer-events: none;
+}
+
+.score-input {
+    width: 35px;
+    height: 9px;
+    text-align: center;
+}
+
+/***********/
+
+/* Profile */
+
+.profile {
+    float: left;
+    width: 200px;
+    background: #448AFF;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.profile img {
+    display: block;
+    margin: 10px auto 10px;
+}
+
+.profile h3 {
+    margin: 0 0 10px;
+}
+
+/**************/
+
+/* sort-controls */
+
+.sort-controls {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.sort-controls li {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 15px;
+    border: 1.5px solid #ccc;
+}
+
+.sort-controls li:first-of-type {
+    width: 300px;
+    padding: 20px;
+    border-right: none;
+}
+
+.sort-controls li:last-of-type {
+    width: 82px;
+    padding: 20px 0 20px 10px;
+}
+
+.sort-controls li:before {
+    position: absolute;
+    height: 11px;
+    width: 0;
+    top: 0;
+    right: 10px;
+    border-style: solid;
+    border-width: 8px 5px;
+    border-color: transparent;
+    content: '';
+    border-bottom-color: rgba(119, 119, 119);
+}
+
+.sort-controls li:after {
+    position: absolute;
+    height: 12px;
+    width: 0;
+    bottom: 0;
+    right: 10px;
+    border-style: solid;
+    border-width: 8px 5px;
+    border-color: transparent;
+    content: '';
+    border-top-color: rgba(119, 119, 119);
+}
+
+.sort-controls li.first:before {
+    border-bottom-color: rgba(119, 119, 119, 0);
+}
+
+.sort-controls li.second:after {
+    border-top-color: rgb(119, 119, 119);
+}
