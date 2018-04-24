@@ -152,5 +152,5 @@ body {
 }
 
 .sort-controls li.second:after {
-    border-top-color: rgb(119, 119, 119);
+    border-top-color: rgb(119, 119, 119, 0);
 }
