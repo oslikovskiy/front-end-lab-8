@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.color-box {
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .color-item {
+        margin: 12px;
+        height: 170px;
+        width: 10%;
+        border-radius: 10px;
+        .add {
+            background-color: #fff;
+            border: 1px solid #fff;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 137px;
+            margin-left: 11px;
+            border-radius: 5px;
+            padding: 3px 10px;
+        }
+    }
+}

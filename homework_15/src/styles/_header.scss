@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    .search-input {
+        margin: 33px;
+        border: none;
+        color: $black;
+        font-size: 1.3em;
+        &::placeholder {
+            color: $grey;
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+    .selected-color {
+        margin: 15px;
+    }
+}
