@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework 13</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myBlogList">
+
+  <div class="main-cont">
+    <h1>BLOG</h1>
+    <div>
+      <div class="trips" ng-show="isvisible" ng-repeat="item in getTrip()">
+        <p>{{item}}</p>
+      </div>
+      <div class="all-posts" ng-show="!isvisible" ng-repeat="item in defaultPosts">
+        <div class="main-post">
+          <div class="post-image">
+            <div class="space">
+              <img src="{{item.url}}" alt="photo">
+            </div>
+            <p>
+              <span ng-repeat="trip in item.category">{{trip}}</span>
+              <button class="btn-edit" ng-click="editPost(item)">{{item.editItem ? 'Edit':'Save'}}</button>
+            </p>
+          </div>
+          <form class="post-form" name="myForm">
+            <div class="post-title">
+              <input type="text" ng-show="!item.editItem" name="title_name" ng-model="item.title" value={{item.title}} ng-disabled="item.editItem"
+                required>
+              <p ng-show="item.editItem">{{item.title}}</p>
+              <span class="error" ng-show="myForm.title_name.$error.required">Required!</span>
+            </div>
+            <div class="post-description">
+              <textarea ng-show="!item.editItem" name="description" cols="30" rows="10" ng-model="item.description" ng-disabled="item.editItem"
+                required></textarea>
+              <p ng-show="item.editItem">{{item.description}}</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div class="">
+    <div class="add-form-wrapper">
+      <div class="add-form" ng-show="isVisible">
+        <div class="add-form-item">
+          <p class="add-form-title">Title</p>
+          <p class="add-form-input">
+            <input id="name" type="text" ng-model="titleName" placeholder="your text ...">
+          </p>
+        </div>
+        <div class="add-form-item">
+          <p class="add-form-title">Categories</p>
+          <p class="add-form-input">
+            <input type="text" ng-model="newCategory" placeholder="your text ...">
+          </p>
+        </div>
+        <div class="add-form-item">
+          <p class="add-form-title">Description</p>
+          <p class="add-form-input">
+            <textarea ng-model="newDescript" placeholder="your text ..."></textarea>
+          </p>
+        </div>
+        <div class="add-form-item">
+          <p class="add-form-title">Photo</p>
+          <p class="add-form-input">
+            <input ng-model="newImage" type="text" placeholder="your text ...">
+          </p>
+        </div class="add-form-item">
+      </div>
+      <div class="btn-add-wrapper">
+        <button class="btn-add" ng-click="addPost()"> Add Post </button>
+      </div>
+    </div>
+  </div class="main-info">
+  <div class="categories-section">
+    <div class="categories">
+      <h3>Categories:</h3>
+      <ul>
+        <li ng-repeat="item in getItem()">
+          <button ng-click="setPost(item)">{{item}}</button>
+        </li>
+      </ul>
+      <h3>Filter</h3>
+      <input class="categories-section-input" type="text" placeholder="blog title...">
+    </div>
+  </div>
+
+  <script src="lib/angular.min.js"></script>
+  <script src="src/data.js"></script>
+  <script src="src/app.js"></script>
+</body>
+
+</html>
