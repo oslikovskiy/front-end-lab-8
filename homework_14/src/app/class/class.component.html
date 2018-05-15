@@ -1,0 +1,26 @@
+<ng-container *ngIf="!isEdit">
+  <td>{{number}}</td>
+  <td>{{item.topic}}</td>
+  <td>{{item.date}}</td>
+  <td>{{item.lecturer}}</td>
+  <td>
+    <button class="btn btn-primary" (click)="toggleEdit()">Edit</button>
+    <button class="btn btn-danger" (click)="remove()">Delete</button>
+  </td>
+</ng-container>
+<ng-container *ngIf="isEdit">
+  <td>{{number}}</td>
+  <td>
+    <input type="text" [(ngModel)]="localItem.topic" placeholder="Topic" #change/>
+  </td>
+  <td>
+    <input type="date" [(ngModel)]="localItem.date" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="localItem.lecturer" placeholder="Lecturer"/>
+  </td>
+  <td>
+    <button class="btn btn-primary" (click)="save()">Save</button>
+    <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
+  </td>
+</ng-container>

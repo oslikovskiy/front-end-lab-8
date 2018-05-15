@@ -1,0 +1,31 @@
+<div class="header">
+    <h3>Epam FE Lab #8
+        <button class="btn btn-primary" (click)="addClass()">Add</button>
+    </h3>
+</div>
+<table *ngIf="classes.length > 0;else empty_content">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Topic</th>
+        <th>Date</th>
+        <th>Lecturer</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr app-class *ngFor="let class of classes; let i = index"
+            [item]="class"
+            [number]="i + 1"
+            (removeItem)="onRemove($event)"
+            (saveItem)="onSave($event)">
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #empty_content>
+    <div class="empty-content">
+        There are no classes yet.
+        <button class="btn btn-primary" (click)="addClass()">Add</button>
+    </div>
+</ng-template>

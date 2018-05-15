@@ -1,0 +1,12 @@
+h3 {
+  text-align: center;
+}
+
+h3 .btn {
+  position: absolute;
+  right: 10px;
+}
+
+table tr {
+  height: 60px;
+}
